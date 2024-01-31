@@ -1,7 +1,7 @@
 import asyncio
 import logging
 import time
-
+import TOKEN_API
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters.command import Command
 from datetime import datetime
@@ -80,7 +80,7 @@ async def stop_bot(bot: Bot):
 
 
 async def main():
-    bot = Bot(token="6914705938:AAEv4_7-6VoXhJGVGYSqLxJcm50XJliSrww")
+    bot = Bot(TOKEN_API.token)
 
     dp.startup.register(start_bot)
     dp.shutdown.register(stop_bot)
